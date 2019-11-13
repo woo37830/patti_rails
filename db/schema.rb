@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_12_204458) do
+ActiveRecord::Schema.define(version: 2019_11_13_175651) do
 
   create_table "logs", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", comment: "Logging table for thrivecart webhook", force: :cascade do |t|
     t.datetime "received", null: false
@@ -19,11 +19,12 @@ ActiveRecord::Schema.define(version: 2019_11_12_204458) do
     t.string "status", limit: 128, null: false
   end
 
-  create_table "users", id: :integer, comment: "key", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", comment: "Cross reference table between thrivecart and engagemore", force: :cascade do |t|
+  create_table "users", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", comment: "Cross reference table between thrivecart and engagemore", force: :cascade do |t|
     t.datetime "added", null: false
     t.string "email", limit: 128, null: false
     t.string "thrivecartid", limit: 64, null: false
     t.string "engagemoreid", limit: 64, null: false
+    t.string "status", limit: 32, default: "active", null: false
   end
 
 end
