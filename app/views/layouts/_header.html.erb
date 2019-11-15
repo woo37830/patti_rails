@@ -88,7 +88,15 @@ your theme's stylesheet content.
 
                   <img src="http://jwooten37830.com/blog/wp-content/themes/twentyten/images/headers/path.jpg" width="940" height="198" alt="" />
               </div><!-- #branding -->
+              <div id="access" role="navigation">
+                        <div class="skip-link screen-reader-text"><a href="#content" title="Skip to content">Skip to content</a></div>
+                        <div class="menu-header"><ul id="menu-menu-1" class="menu">
+          <li id="menu-item-699" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-699"><a href="http://localhost:3000" aria-current="page">Home</a></li>
+          <li id="menu-item-700" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-700"><%= link_to 'About', '/about' %></li>
+          <li id="menu-item-700" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-700"><%= link_to ENV["PATTI_ISSUES_SERVER"],  :target => "_blank" do %>Report Bugs<% end %></li>
+          <li id="menu-item-703" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-703"><%= link_to ENV["NOTES_SERVER"],  :target => "_blank" do %>Leave a Note<% end %></li>
 
+          </div>			</div><!-- #access -->
 
   </div><!-- #masthead -->
 </div><!-- #header -->
@@ -97,9 +105,3 @@ your theme's stylesheet content.
 
   <div id="container">
     <div id="content" role="main">
-
-
-<div id="nav-above" class="navigation">
-  <div class="nav-previous"><a href="http://jwooten37830.com/blog/?paged=2" ><span class="meta-nav">&larr;</span> Older posts</a></div>
-  <div class="nav-next"></div>
-</div><!-- #nav-above -->

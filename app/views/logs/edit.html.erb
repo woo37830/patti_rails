@@ -3,4 +3,5 @@
 <%= render 'form', log: @log %>
 
 <%= link_to 'Show', @log %> |
+<td><%= link_to 'Destroy', @log, method: :delete, data: { confirm: 'Are you sure?' } %></td>
 <%= link_to 'Back', logs_path %>
