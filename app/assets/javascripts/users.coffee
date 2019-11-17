@@ -3,5 +3,5 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 jQuery ->
   $('#posts-table').dataTable()
-  "sPaginationType": "bootstrap"
+  "sPaginationType": "full_numbers"
   "dom": '<lf<t>ip>'
