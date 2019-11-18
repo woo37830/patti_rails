@@ -3,10 +3,17 @@
     $(".alert" ).fadeOut(10000);
   });
 </script>
-<div id="footer" role="contentinfo">
-Commit: <%= commit = `git rev-parse --short HEAD` %>
-Branch: <%= thebranch = `git rev-parse --abbrev-ref HEAD` %>
-<table id="info">
-<tr><td><%= puts commit %><%= puts thebranch %></td><td>layout managed by _base.scss</td><!--<td>Debug: <%=debug(params) %></td> --></tr>
-</table>
-</div>
+    <div id="footer" role="contentinfo">
+      Commit: <%= commit = `git rev-parse --short HEAD` %>
+      Branch: <%= thebranch = `git rev-parse --abbrev-ref HEAD` %>
+      <table id="info">
+        <tr>
+          <td><%= puts commit %><%= puts thebranch %></td>
+          <td>layout managed by _base.scss</td>
+          <!--<td>Debug: <%=debug(params) %></td> -->
+        </tr>
+      </table>
+    </div> <!-- #footer -->
+</content>
+</container>
+</main>

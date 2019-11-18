@@ -2,6 +2,4 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 jQuery ->
-  $('#posts-table').dataTable()
-  "sPaginationType": "full_numbers"
-  "dom": '<lf<t>ip>'
+        $('#posts-table').dataTable()
