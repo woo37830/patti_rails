@@ -1,15 +1,24 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Patti</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+    <title>EngagemoreCRM</title>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <%= render "layouts/header" %>
+    <% if notice %>
+      <div class="alert alert-success"><%= notice %></div>
+    <% end %>
+    <% if alert %>
+      <div class="alert alert-danger"><%= alert %></div>
+    <% end %>
+    <!-- ul class="nav">
+      <li class="active"><a href="/ideas">Ideas</a></li>
+    </ul -->
     <%= yield %>
+    <%= render "layouts/footer" %>
   </body>
 </html>

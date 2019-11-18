@@ -1,0 +1,36 @@
+<link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css">
+<p id="notice"><%= notice %></p>
+
+<h1>Users</h1>
+
+<table id="posts-table" class="display">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Added</th>
+      <th>Email</th>
+      <th>ThriveCart ID</th>
+      <th>Engagemore ID</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= link_to(controller: 'users', action: 'show', id: user.id) do %>
+            <strong><%= user.id %></strong>
+          <% end %> </td>
+        <td><%= user.added %></td>
+        <td><%= user.email %></td>
+        <td><%= user.thrivecartid %></td>
+        <td><%= user.engagemoreid %></td>
+        <td><%= user.status %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New User', new_user_path %>

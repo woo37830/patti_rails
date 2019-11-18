@@ -1,0 +1,42 @@
+<h2>Patti Rails</h2>
+<hr />
+<style type="text/css">
+	.text_block {
+		 border: 1px solid #CC33CC;
+		 font-size: 14px;
+      width: 800px;
+      height: 300px;
+      padding: 5px;
+      white-space: pre-wrap;
+      overflow: hidden;
+      o-text-overflow: ellipsis;
+      text-overflow: ellipsis;
+	}
+</style>
+<div class='text_block'>
+	The Patti Rails app allows inspection of the databases used by the webhook for connecting
+	ThriveCart to AllClients.  Two tables can be inspected:  A log of all the interactions, and
+	the list of ThriveCart ids coupled with their corresponding AllClients id and email.  The status
+	for this table shows if the AllClients account is active or inactive.  It is toggled by being current
+	on payments and off by cancelling.
+
+	It incorporates the use of JQuery Datatables to list the tables.
+</div>
+<br />
+<h3>Developer</h3>
+<p />
+<table>
+	<tbody>
+		<tr><td><img src="http://jwooten37830.com/home/woo3.jpeg" width=150px height=200px /></td></tr>
+		<tr><td>John Wooten, Ph.D.</td></tr>
+		<tr><td>Big Cheese</td></tr>
+		<tr><td><a href="mailto:jwooten37830@icloud.com?subject=Rails%20Blog%20Comment">Send Me a Note</a></td></tr>
+	</tbody>
+</table>
+
+<h3>Outstanding Issues</h3>
+<pre>
+<%= cmd=`ghi list>tmp.txt;cat tmp.txt` %>
+</pre>
+
+<%= link_to "Back", request.referer.present? ? request.referer : default_path %>

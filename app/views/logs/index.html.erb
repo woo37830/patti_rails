@@ -1,0 +1,32 @@
+<link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css">
+<p id="notice"><%= notice %></p>
+
+<h1>Logs</h1>
+
+<table id="posts-table" class="display" width="900">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Received</th>
+      <th>Email</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @logs.each do |log| %>
+      <tr>
+        <td><%= link_to(controller: 'logs', action: 'show', id: log.id) do %>
+            <strong><%= log.id %></strong>
+          <% end %> </td>
+        <td><%= log.received %></td>
+        <td><%= log.email %></td>
+        <td><%= log.status %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Log', new_log_path %>
