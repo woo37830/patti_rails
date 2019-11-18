@@ -3,3 +3,5 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 jQuery ->
         $('#posts-table').dataTable()
+          sPaginationType: "full_numbers"
+          bJQueryUI: true
