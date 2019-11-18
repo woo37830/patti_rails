@@ -4,14 +4,17 @@
   });
 </script>
     <div id="footer" role="contentinfo">
-      Commit: <%= commit = `git rev-parse --short HEAD` %>
-      Branch: <%= thebranch = `git rev-parse --abbrev-ref HEAD` %>
       <table id="info">
         <tr>
-          <td><%= puts commit %><%= puts thebranch %></td>
-          <td>layout managed by _base.scss</td>
-          <!--<td>Debug: <%=debug(params) %></td> -->
+          <td>Commit: <%= `git rev-parse --short HEAD` %></td>
+          <td>Branch: <%= `git rev-parse --abbrev-ref HEAD` %></td>
         </tr>
+        <tr>
+          <td>layout managed by _base.scss</td>
+          <td>Environment: <%= Rails.env %></td>
+        </tr>
+        <!--<td>Debug: <%=debug(params) %></td> -->
+
       </table>
     </div> <!-- #footer -->
 </content>

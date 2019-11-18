@@ -49,6 +49,6 @@ test:
 #
 production:
   <<: *default
-  database: patti_production
-  username: patti
+  database: users_db
+  username: woo
   password: <%= ENV['PATTI_DATABASE_PASSWORD'] %>
