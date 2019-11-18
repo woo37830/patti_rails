@@ -39,4 +39,4 @@
 <%= cmd=`ghi list>tmp.txt;cat tmp.txt` %>
 </pre>
 
-<%= link_to 'Back', logs_path %>
+<%= link_to "Back", request.referer.present? ? request.referer : default_path %>
