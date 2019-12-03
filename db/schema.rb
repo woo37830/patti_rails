@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_13_175651) do
+ActiveRecord::Schema.define(version: 2019_12_02_180622) do
 
   create_table "logs", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", comment: "Logging table for thrivecart webhook", force: :cascade do |t|
     t.datetime "received", null: false
@@ -24,7 +24,8 @@ ActiveRecord::Schema.define(version: 2019_11_13_175651) do
     t.string "email", limit: 128, null: false
     t.string "thrivecartid", limit: 64, null: false
     t.string "engagemoreid", limit: 64, null: false
-    t.string "status", limit: 32, default: "active", null: false
+    t.string "status", default: "active", null: false
+    t.string "product"
   end
 
 end

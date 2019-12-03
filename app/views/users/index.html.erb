@@ -12,6 +12,7 @@
       <th>ThriveCart ID</th>
       <th>Engagemore ID</th>
       <th>Status</th>
+      <th>Product</th>
     </tr>
   </thead>
 
@@ -26,6 +27,7 @@
         <td><%= user.thrivecartid %></td>
         <td><%= user.engagemoreid %></td>
         <td><%= user.status %></td>
+        <td><%= user.product %></td>
       </tr>
     <% end %>
   </tbody>
@@ -33,6 +35,5 @@
 
 <br>
 
-<%= link_to "Back", request.referer.present? ? request.referer : default_path %> |
-<%= link_to 'Logs', logs_path %> | 
+<%= link_to 'Logs', logs_path %> |
 <%= link_to 'New User', new_user_path %>
