@@ -11,8 +11,8 @@
           <td>Branch: <%= `git rev-parse --abbrev-ref HEAD` %></td>
         </tr>
         <tr>
-          <td>layout managed by _base.scss</td>
           <td>Environment: <%= Rails.env %></td>
+          <td>Database: <%= ActiveRecord::Base.connection.current_database %></td>
         </tr>
         <!--<td>Debug: <%=debug(params) %></td> -->
 

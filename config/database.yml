@@ -19,7 +19,8 @@ default: &default
 
 development:
   <<: *default
-  database: patti_development
+  database: users_db
+#  database: patti_development
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
