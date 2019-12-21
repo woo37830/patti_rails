@@ -2,5 +2,5 @@
 
 <%= render 'form', user: @user %>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
+<% if current_account %><%= link_to 'Edit', edit_user_path(@user) %> |<% end %>
 <%= link_to 'Back', users_path %>

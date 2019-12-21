@@ -1,6 +1,6 @@
 class LogsController < ApplicationController
   before_action :set_log, only: [:show, :edit, :update, :destroy]
-
+  before_action :authorize, except: [:show, :index]
   # GET /logs
   # GET /logs.json
   def index
