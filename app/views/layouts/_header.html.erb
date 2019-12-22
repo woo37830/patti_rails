@@ -36,11 +36,11 @@
 <div id="main">
   <div id="account">
   <% if current_account %>
-        <!-- current_user will return true if a user is logged in -->
-        <%= "Logged in as #{current_account.email}" %> | <%= link_to 'Home', root_path %> | <%= link_to 'Log Out', logout_path, method: :delete %>
+      <!-- current_user will return true if a user is logged in -->
+        <%= "Logged in as #{current_account.email}" %> | <%= link_to 'Home', users_path %> | <%= link_to 'Log Out', logout_path, method: :delete %>
       <% else %>
         <!-- not logged in -->
-        <%= link_to 'Home', root_path %> | <%= link_to 'Log In', login_path %> or <%= link_to 'Sign Up', new_account_path %>
+        <%= link_to 'Home', users_path %> | <%= link_to 'Log In', login_path %> or <%= link_to 'Sign Up', new_account_path %>
       <% end %>
   </div><!-- #account -->
   <div id="container">
