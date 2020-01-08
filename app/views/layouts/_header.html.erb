@@ -15,6 +15,14 @@
           <a href="http://localhost:3000" title="EngagemoreCRM" rel="home">EngagemoreCRM</a>
         </span>
       </h1>
+      <div id="site-description">Manage Users and View Logs<br />
+    <% if current_account %>
+        <%= "User: #{current_account.name}" %> | <%= link_to 'Log Out', logout_path, method: :delete %>
+      <% else %>
+        <!-- not logged in -->
+        <%= link_to 'Log In', login_path %> or <%= link_to 'Sign Up', new_account_path %>
+    <% end %>
+  </div>
 
           <img src="http://jwooten37830.com/blog/wp-content/themes/twentyten/images/headers/path.jpg" width="940" height="198" alt="" />
     </div><!-- #branding -->
@@ -24,6 +32,7 @@
         </div>
         <div class="menu-header"><ul id="menu-menu-1" class="menu">
           <li id="menu-item-700" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-700"><%= link_to 'About', '/about' %></li>
+          <li id="menu-item-700" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-700"><%= link_to 'Views', '/about' %></li>
           <li id="menu-item-700" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-700"><%= link_to ENV["PATTI_DOCUMENTS"],  :target => "_blank" do %>Documents<% end %></li>
           <li id="menu-item-700" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-700"><%= link_to ENV["PATTI_ISSUES_SERVER"],  :target => "_blank" do %>Report Bugs<% end %></li>
           <li id="menu-item-703" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-703"><%= link_to ENV["NOTES_SERVER"],  :target => "_blank" do %>Leave a Note<% end %></li>
@@ -34,14 +43,6 @@
 </div><!-- #header -->
 
 <div id="main">
-  <div id="account">
-  <% if current_account %>
-      <!-- current_user will return true if a user is logged in -->
-        <%= "Logged in as #{current_account.email}" %> | <%= link_to 'Home', users_path %> | <%= link_to 'Log Out', logout_path, method: :delete %>
-      <% else %>
-        <!-- not logged in -->
-        <%= link_to 'Home', users_path %> | <%= link_to 'Log In', login_path %> or <%= link_to 'Sign Up', new_account_path %>
-      <% end %>
-  </div><!-- #account -->
+
   <div id="container">
     <div id="content" role="main">
