@@ -13,9 +13,9 @@ default: &default
   adapter: mysql2
   encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: root
+  username: woo
   password: random1
-  host: jwooten37830.com
+  host:  44.231.61.194
 
 development:
   <<: *default

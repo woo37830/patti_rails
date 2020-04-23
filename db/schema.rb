@@ -25,6 +25,8 @@ ActiveRecord::Schema.define(version: 2019_12_21_030025) do
     t.string "email", limit: 128, null: false
     t.string "request_json", limit: 16000, null: false
     t.string "status", limit: 128, null: false
+    t.string "commit_hash", limit: 64
+    t.string "branch", limit: 64
   end
 
   create_table "maaking_users", primary_key: "userid", id: :integer, options: "ENGINE=MyISAM DEFAULT CHARSET=latin1", force: :cascade do |t|
@@ -46,8 +48,9 @@ ActiveRecord::Schema.define(version: 2019_12_21_030025) do
   create_table "users", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", comment: "Cross reference table between thrivecart and engagemore", force: :cascade do |t|
     t.datetime "added", null: false
     t.string "email", limit: 128, null: false
-    t.string "thrivecartid", limit: 64, null: false
     t.string "engagemoreid", limit: 64, null: false
+    t.integer "orderid", null: false
+    t.integer "invoiceid", null: false
     t.string "status", default: "active", null: false
     t.string "product", default: "product-9", null: false
   end
